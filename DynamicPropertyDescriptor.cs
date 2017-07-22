@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Eortc.Buddy.Mvvm.DynamicCollection
+namespace DynamicCollection
 {
     public class DynamicPropertyDescriptor : System.ComponentModel.PropertyDescriptor
     {

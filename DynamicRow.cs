@@ -5,7 +5,6 @@ using System.Dynamic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Microsoft.CSharp.RuntimeBinder;
-using TraceTool;
 using Binder = Microsoft.CSharp.RuntimeBinder.Binder;
 // ReSharper disable ExplicitCallerInfoArgument
 // ReSharper disable MemberCanBeProtected.Global
@@ -13,7 +12,7 @@ using Binder = Microsoft.CSharp.RuntimeBinder.Binder;
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable RedundantNameQualifier
 
-namespace Eortc.Buddy.Mvvm.DynamicCollection
+namespace DynamicCollection
 {
     // copy of DevExpress.XtraEditors.DXErrorProvider.ErrorType
     public enum CellErrorType {None,Default,Information,Warning,Critical,User1,User2,User3,User4,User5,User6,User7,User8,User9}
@@ -31,7 +30,7 @@ namespace Eortc.Buddy.Mvvm.DynamicCollection
     // property descriptor on the row
     public class PropertyDescriptor
     {
-        // Value and Getter are exclusive !!!
+        // Value and Getter are mutually exclusive !!!
         public object          Value ;      // value if no getter 
         public PropertyGetter  Getter ;     // Func<object>
         public PropertySetter  Setter ;     // Func<object,bool>
@@ -261,14 +260,14 @@ namespace Eortc.Buddy.Mvvm.DynamicCollection
                         var converted = converter.ConvertFrom(value);
                         propertyDescriptor.Value = converted;
                     }
-                    catch (FormatException e)    
+                    catch (FormatException /*e*/)    
                     {
-                        TTrace.Error.Send($"DynamicRow.TrySetMember {binder.Name} : FormatException {e.Message}") ;
+                        //TTrace.Error.Send($"DynamicRow.TrySetMember {binder.Name} : FormatException {e.Message}") ;
                         return false;   // false = Error
                     }
-                    catch (Exception e)      
+                    catch (Exception /*e*/)      
                     {
-                        TTrace.Error.Send($"DynamicRow.TrySetMember {binder.Name} : Exception {e.Message}") ;
+                        //TTrace.Error.Send($"DynamicRow.TrySetMember {binder.Name} : Exception {e.Message}") ;
                         return false;   // false = error
                     }
                 }

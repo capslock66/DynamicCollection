@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Windows;
-using System.Windows.Controls;
-using TraceTool;
+using DynamicCollection;
+//using TraceTool;
 
 //<UserControl.Resources>
 //  <dynamicCollection:DynamicColumnTemplateSelector DefaultColumnTemplate = "{StaticResource DefaultColumnTemplate}" x:Key="DynamicColumnTemplateSelector"/>

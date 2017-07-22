@@ -8,7 +8,7 @@ using System.Linq;
 
 // Inspired by Joel Heymbeeck work at https://github.com/SinaC/WPF-Helpers
 
-namespace Eortc.Buddy.Mvvm.DynamicCollection
+namespace DynamicCollection
 {
 
     public interface IDynamicCollection

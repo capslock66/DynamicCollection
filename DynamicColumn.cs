@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
+using System.Windows;               // PresentationCore.dll
+using System.Windows.Controls;      // presentationFramework.dll
+using System.Windows.Data;          // windowsBase.dll
 
-namespace Eortc.Buddy.Mvvm.DynamicCollection
+namespace DynamicCollection
 {
     public class DynamicColumn : ObservableObject , IDynamicColumn
     {

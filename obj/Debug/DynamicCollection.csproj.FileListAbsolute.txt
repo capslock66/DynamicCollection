@@ -1,0 +1,1 @@
+D:\GitHub\DotNet\DynamicCollection\obj\Debug\DynamicCollection.csprojResolveAssemblyReference.cache

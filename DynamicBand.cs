@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Eortc.Buddy.Mvvm.DynamicCollection
+namespace DynamicCollection
 {
     public class DynamicBand : ObservableObject
     {
